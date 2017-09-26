@@ -83,7 +83,7 @@ export class SlickComponent implements AfterViewInit, OnDestroy {
 
             this.$instance.on('destroy', (event, slick) => {
                 self.zone.run(() => {
-                    self.destroy.emit({event, slick});
+                    // self.destroy.emit({event, slick});    //temporary solution : https://github.com/devmark/ngx-slick/issues/6
                 });
             });
         });
